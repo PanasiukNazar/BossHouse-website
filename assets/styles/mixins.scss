@@ -1,0 +1,30 @@
+// text colors
+$white_color: #fff;
+
+// text sizes
+$text: 16px;
+
+// text hights
+$text_hight: 20px;
+
+@mixin small-button {
+    border-radius: 30px;
+    padding: 20px 12px;
+    font-weight: 400;
+    font-size: $text;
+    line-height: $text_hight;
+    text-transform: uppercase;
+}
+
+@mixin button-dark {
+    @include small-button;
+    background: #1e1e1e;
+    color: #fff;
+    border: 2px solid #1e1e1e;
+    transition: all 0.5s;
+
+    &:hover {
+        background: #fff;
+        color: #1e1e1e;
+    }
+}
