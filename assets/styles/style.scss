@@ -1,5 +1,6 @@
 // text colors
-$white_color: #fff;
+$white_theme_color: #fff;
+$dark_theme_color: #1e1e1e;
 
 // text sizes
 $text: 16px;
@@ -17,6 +18,9 @@ $text_hight: 20px;
 // navbar start
 
 .navbar {
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+
     &__logo {
         img {
             width: 150px;
@@ -34,7 +38,6 @@ $text_hight: 20px;
 
             a {
                 text-decoration: none;
-                color: #1e1e1e;
             }
 
             &:nth-child(2) {
@@ -53,19 +56,68 @@ $text_hight: 20px;
 
     &__info {
         display: flex;
+        align-items: center;
 
         .navbar__btn {
             margin-right: 15px;
-            @include button-dark;
+        }
+
+        .navbar__cart {
+            i {
+                font-size: 20px;
+            }
         }
     }
 
     &--light {
-        background: #fff;
+        background: $white_theme_color;
+        .logo--dark {
+            display: none;
+        }
+
+        &__logo {
+            img {
+                width: 150px;
+                height: 70px;
+                object-fit: contain;
+            }
+        }
+        .navbar__menu {
+            .navbar__link {
+                a {
+                    color: $dark_theme_color;
+                }
+            }
+        }
+        .navbar__info {
+            .navbar__btn {
+                @include button-dark;
+            }
+        }
     }
 
     &--dark {
-        background: #1e1e1e;
+        background: $dark_theme_color;
+        .logo--light {
+            display: none;
+        }
+        .navbar__menu {
+            .navbar__link {
+                a {
+                    color: $white_theme_color;
+                }
+            }
+        }
+        .navbar__info {
+            .navbar__btn {
+                @include button-white;
+            }
+            .navbar__cart {
+                i {
+                    color: $white_theme_color;
+                }
+            }
+        }
     }
 }
 

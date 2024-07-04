@@ -1,5 +1,6 @@
 // text colors
-$white_color: #fff;
+$white_theme_color: #fff;
+$dark_theme_color: #1e1e1e;
 
 // text sizes
 $text: 16px;
@@ -9,7 +10,7 @@ $text_hight: 20px;
 
 @mixin small-button {
     border-radius: 30px;
-    padding: 20px 12px;
+    padding: 12px 20px;
     font-weight: 400;
     font-size: $text;
     line-height: $text_hight;
@@ -18,13 +19,26 @@ $text_hight: 20px;
 
 @mixin button-dark {
     @include small-button;
-    background: #1e1e1e;
-    color: #fff;
-    border: 2px solid #1e1e1e;
+    background: $dark_theme_color;
+    color: $white_theme_color;
+    border: 2px solid $dark_theme_color;
     transition: all 0.5s;
 
     &:hover {
-        background: #fff;
-        color: #1e1e1e;
+        background: $white_theme_color;
+        color: $dark_theme_color;
+    }
+}
+
+@mixin button-white {
+    @include small-button;
+    background: $white_theme_color;
+    color: $dark_theme_color;
+    border: 2px solid $white_theme_color;
+    transition: all 0.5s;
+
+    &:hover {
+        background: $dark_theme_color;
+        color: $white_theme_color;
     }
 }
