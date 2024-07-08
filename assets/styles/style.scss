@@ -1,12 +1,16 @@
 // text colors
 $white_theme_color: #fff;
 $dark_theme_color: #1e1e1e;
+$main_theme_color: #ff914d;
 
 // text sizes
 $text: 16px;
 
 // text hights
 $text_hight: 20px;
+
+// transitions
+$main_transition: all 0.3s ease-in-out;
 
 @import url('https://fonts.googleapis.com/css2?family=Unbounded:wght@200..900&display=swap');
 @import 'mixins.scss';
@@ -20,6 +24,9 @@ $text_hight: 20px;
 .navbar {
     border-bottom-left-radius: 50px;
     border-bottom-right-radius: 50px;
+    position: relative;
+    z-index: 30;
+    background: $white_theme_color;
 
     &__logo {
         img {
@@ -29,15 +36,24 @@ $text_hight: 20px;
         }
     }
 
+    .logo--dark {
+        display: none;
+    }
+
     &__menu {
         display: flex;
         .navbar__link {
-            font-weight: 500px;
+            font-weight: 500;
             font-size: $text;
             line-height: $text_hight;
 
             a {
                 text-decoration: none;
+                color: $dark_theme_color;
+                transition: $main_transition;
+                &:hover {
+                    color: $main_theme_color !important;
+                }
             }
 
             &:nth-child(2) {
@@ -60,6 +76,7 @@ $text_hight: 20px;
 
         .navbar__btn {
             margin-right: 15px;
+            @include button-dark;
         }
 
         .navbar__cart {
@@ -69,35 +86,11 @@ $text_hight: 20px;
         }
     }
 
-    &--light {
-        background: $white_theme_color;
-        .logo--dark {
-            display: none;
-        }
-
-        &__logo {
-            img {
-                width: 150px;
-                height: 70px;
-                object-fit: contain;
-            }
-        }
-        .navbar__menu {
-            .navbar__link {
-                a {
-                    color: $dark_theme_color;
-                }
-            }
-        }
-        .navbar__info {
-            .navbar__btn {
-                @include button-dark;
-            }
-        }
-    }
-
     &--dark {
         background: $dark_theme_color;
+        .logo--dark {
+            display: block;
+        }
         .logo--light {
             display: none;
         }
@@ -119,6 +112,104 @@ $text_hight: 20px;
             }
         }
     }
+
+    &--fixed {
+        position: fixed !important;
+        z-index: 9999 !important;
+        width: 100%;
+        top: 0;
+        .logo--light {
+            display: none;
+        }
+    }
 }
 
 // navbar end
+
+// hero start
+
+.hero {
+    background-image: url(/assets/images/hero-bg.jpg);
+    position: absolute;
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+    top: 0;
+
+    &__content {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        -webkit-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+    }
+    &__title {
+        font-weight: 700;
+        font-size: 110px;
+        line-height: 135px;
+        background: linear-gradient(to right, #ffffff, #787878);
+        background-clip: text;
+        color: transparent;
+        text-transform: uppercase;
+        margin-bottom: 20px;
+
+        span {
+            color: $main_theme_color;
+        }
+    }
+
+    &__text {
+        font-size: 40px;
+        line-height: 50px;
+        font-weight: 300;
+        background: linear-gradient(to right, #ffffff, #787878);
+        background-clip: text;
+        color: transparent;
+        text-transform: uppercase;
+        margin-bottom: 80px;
+        span {
+            background: linear-gradient(to right, #4173cd, #ffe15a);
+            background-clip: text;
+            color: transparent;
+        }
+    }
+
+    .hero__link {
+        text-decoration: none;
+    }
+
+    &__button {
+        @include hero-button;
+    }
+}
+
+.hero__image {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+
+// hero end
+
+// gallery start
+
+.hero__gallery {
+    .devider__text {
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 22px;
+        color: $main_theme_color;
+    }
+}
+
+// gallery end
+
+// animations start
+
+.fadeInDown {
+    visibility: visible;
+    animation-duration: 1.5s;
+    animation-delay: 0s;
+    animation-name: fadeInDown;
+}
+// animations end

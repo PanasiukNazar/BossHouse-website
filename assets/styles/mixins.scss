@@ -1,6 +1,7 @@
 // text colors
 $white_theme_color: #fff;
 $dark_theme_color: #1e1e1e;
+$main_theme_color: #ff914d;
 
 // text sizes
 $text: 16px;
@@ -40,5 +41,42 @@ $text_hight: 20px;
     &:hover {
         background: $dark_theme_color;
         color: $white_theme_color;
+    }
+}
+
+@mixin hero-button {
+    @include small-button;
+    display: flex;
+    align-items: center;
+    background: $main_theme_color;
+    padding: 4px 30px 4px 4px;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 30px;
+    text-transform: uppercase;
+    outline: none;
+    border: none;
+    border-radius: 60px;
+
+    .button__icon {
+        margin-right: 20px;
+        transition: all 0.2s ease-in;
+
+        i {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 32px;
+            color: $main_theme_color;
+            background-color: #131315;
+            border-radius: 50%;
+            height: 70px;
+            width: 70px;
+        }
+    }
+
+    &:hover .button__icon {
+        transform: rotate(90deg);
+        transition: all 0.2s ease-out;
     }
 }
