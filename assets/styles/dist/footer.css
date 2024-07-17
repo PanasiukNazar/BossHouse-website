@@ -1,0 +1,18 @@
+@import url("https://fonts.googleapis.com/css2?family=Unbounded:wght@200..900&display=swap");
+@import url(main-styles.scss);
+* {
+  font-family: "Unbounded", sans-serif;
+}
+
+.footer__wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+.footer__reviews {
+  border-radius: 30px;
+  padding: 12px 20px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  text-transform: uppercase;
+}

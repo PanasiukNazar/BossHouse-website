@@ -13,10 +13,34 @@ $text_hight: 20px;
 $main_transition: all 0.3s ease-in-out;
 
 @import url('https://fonts.googleapis.com/css2?family=Unbounded:wght@200..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 @import 'mixins.scss';
 
 * {
     font-family: 'Unbounded', sans-serif;
+}
+
+i {
+    cursor: pointer;
+}
+
+body {
+    overflow-y: hidden;
+}
+
+.popup::-webkit-scrollbar {
+    width: 5px;
+    height: 70px;
+    padding-top: 50px;
+}
+
+.popup::-webkit-scrollbar-track {
+    background: none;
+}
+
+.popup::-webkit-scrollbar-thumb {
+    background-color: $main_theme_color;
+    border-radius: 30px;
 }
 
 // navbar start
@@ -128,6 +152,12 @@ $main_transition: all 0.3s ease-in-out;
 
 // hero start
 
+.hero__wrapper {
+    position: relative;
+    height: 100vh;
+    top: -80px;
+}
+
 .hero {
     background-image: url(/assets/images/hero-bg.jpg);
     position: absolute;
@@ -193,23 +223,273 @@ $main_transition: all 0.3s ease-in-out;
 
 // gallery start
 
-.hero__gallery {
+.gallery {
+    height: 700px;
+    margin-top: -40px;
     .devider__text {
         font-size: 18px;
         font-weight: 400;
         line-height: 22px;
         color: $main_theme_color;
     }
+
+    .devider__line {
+        padding-top: 50px;
+        border-bottom: 1px solid #ebebeb;
+    }
+
+    .slider {
+        &__item {
+            img {
+                width: 225px;
+                height: 150px;
+            }
+        }
+    }
 }
 
 // gallery end
 
-// animations start
+// footer start
 
+.footer {
+    position: fixed;
+    width: 100%;
+    z-index: 300;
+    bottom: 0;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+    background-color: $dark_theme_color;
+    border-top: 1px solid #595959;
+
+    &__wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &__reviews {
+        button {
+            @include small-button;
+            border: 1px solid $dark_theme_color;
+            outline: none;
+            transition: all 0.5s;
+
+            &:hover {
+                background: $dark_theme_color;
+                color: $white_theme_color;
+                border-color: $white_theme_color;
+            }
+        }
+    }
+
+    .phone__link {
+        text-decoration: none;
+    }
+
+    &__phone {
+        @include small-button;
+        color: $main_theme_color;
+        background: #333;
+    }
+}
+
+.footer--blured {
+    backdrop-filter: blur(10px);
+    background-color: rgba(30, 30, 30, 0.8);
+}
+
+// footer end
+
+// popup start
+
+.popup {
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    transform: translateY(-50%);
+    width: 100%;
+    max-height: 800px;
+    height: 100%;
+    background: $white_theme_color;
+    border-radius: 30px;
+    overflow-y: scroll;
+    border: none;
+    padding: 30px !important;
+    height: fit-content;
+
+    &__header {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 30px;
+        padding-bottom: 30px;
+        border-bottom: 1px solid #ebebeb;
+    }
+
+    &__title {
+        font-weight: 500;
+        font-size: 40px;
+        line-height: 50px;
+        text-transform: uppercase;
+        color: #333;
+    }
+
+    &__close {
+        i {
+            color: #7d7d7d;
+            font-size: 25px;
+        }
+    }
+}
+
+// popup end
+
+// popup ALL reviews start
+
+.all__reviews {
+    .single__review {
+        background: #f6f6f6;
+        padding: 20px;
+        border-radius: 20px;
+        .row {
+            row-gap: 25px;
+        }
+        .review__header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+            img {
+                width: 65px;
+                height: 65px;
+                border-radius: 50%;
+            }
+            .author {
+                flex: 1;
+                margin-left: 20px;
+                font-family: Unbounded;
+                font-size: 20px;
+                font-weight: 700;
+                line-height: 24.8px;
+            }
+            .stars {
+                i {
+                    &:not(:last-child) {
+                        margin-right: 5px;
+                    }
+                    color: $main_theme_color;
+                }
+            }
+        }
+        .review__body {
+            p {
+                font-family: 'Montserrat';
+                font-size: 16px;
+                font-weight: 500;
+                line-height: 23px;
+                color: #333;
+            }
+        }
+    }
+}
+
+// popup ALL reviews end
+
+// popup LEAVE reviews start
+
+.leave__review {
+    p {
+        font-family: Unbounded;
+        font-size: 18px;
+        font-weight: 700;
+        line-height: 22px;
+    }
+
+    .first___step {
+        margin-bottom: 40px;
+        .review__value {
+            i {
+                color: $main_theme_color;
+                font-size: 45px;
+                &:not(:last-child) {
+                    margin-right: 30px;
+                }
+            }
+        }
+    }
+
+    .second__step {
+        .title {
+            margin-bottom: 30px;
+        }
+        .review__item {
+            display: flex;
+            flex-direction: column;
+            &:not(:last-child) {
+                margin-bottom: 20px;
+            }
+
+            &:last-child {
+                margin-bottom: 30px;
+            }
+        }
+        label {
+            font-family: 'Montserrat';
+            font-size: 16px;
+            font-weight: 500;
+            line-height: 23px;
+            color: #7d7d7d;
+            margin-bottom: 15px;
+        }
+
+        input {
+            border-radius: 10px;
+            background: #f6f6f6;
+            border: none;
+            outline: none;
+            padding: 15px;
+            line-height: 140%;
+        }
+
+        .leave__button {
+            button {
+                @include common-button;
+                text-align: center;
+            }
+        }
+    }
+}
+
+// popup LEAVE reviews end
+
+// popup GRATITUDE reviews start
+.gratitude__popup {
+    .popup__header {
+        justify-content: end;
+        padding-bottom: 0px;
+        border-bottom: none;
+    }
+    .gratitude__review {
+        text-align: center;
+        p {
+            font-weight: 500;
+            font-size: 40px;
+            line-height: 50px;
+            text-transform: uppercase;
+            color: #333;
+            margin-top: 30px;
+        }
+    }
+}
+// popup GRATITUDE reviews end
+
+//  animations start
 .fadeInDown {
     visibility: visible;
-    animation-duration: 1.5s;
+    animation-duration: 1s;
     animation-delay: 0s;
     animation-name: fadeInDown;
 }
-// animations end
+//  animations end

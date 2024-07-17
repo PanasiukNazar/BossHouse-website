@@ -1,0 +1,17 @@
+// text colors
+$white_theme_color: #fff;
+$dark_theme_color: #1e1e1e;
+$main_theme_color: #ff914d;
+
+// text sizes
+$text: 16px;
+
+// text hights
+$text_hight: 20px;
+
+// transitions
+$main_transition: all 0.3s ease-in-out;
+
+@import url('https://fonts.googleapis.com/css2?family=Unbounded:wght@200..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import 'mixins.scss';

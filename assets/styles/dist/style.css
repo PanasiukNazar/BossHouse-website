@@ -1,7 +1,31 @@
 @charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Unbounded:wght@200..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
 * {
   font-family: "Unbounded", sans-serif;
+}
+
+i {
+  cursor: pointer;
+}
+
+body {
+  overflow-y: hidden;
+}
+
+.popup::-webkit-scrollbar {
+  width: 5px;
+  height: 70px;
+  padding-top: 50px;
+}
+
+.popup::-webkit-scrollbar-track {
+  background: none;
+}
+
+.popup::-webkit-scrollbar-thumb {
+  background-color: #ff914d;
+  border-radius: 30px;
 }
 
 .navbar {
@@ -58,6 +82,7 @@
   font-size: 16px;
   line-height: 20px;
   text-transform: uppercase;
+  transition: all 0.5s;
   background: #1e1e1e;
   color: #fff;
   border: 2px solid #1e1e1e;
@@ -89,6 +114,7 @@
   font-size: 16px;
   line-height: 20px;
   text-transform: uppercase;
+  transition: all 0.5s;
   background: #fff;
   color: #1e1e1e;
   border: 2px solid #fff;
@@ -109,6 +135,12 @@
 }
 .navbar--fixed .logo--light {
   display: none;
+}
+
+.hero__wrapper {
+  position: relative;
+  height: 100vh;
+  top: -80px;
 }
 
 .hero {
@@ -164,6 +196,7 @@
   font-size: 16px;
   line-height: 20px;
   text-transform: uppercase;
+  transition: all 0.5s;
   display: flex;
   align-items: center;
   background: #ff914d;
@@ -202,16 +235,244 @@
   bottom: 0;
 }
 
-.hero__gallery .devider__text {
+.gallery {
+  height: 700px;
+  margin-top: -40px;
+}
+.gallery .devider__text {
   font-size: 18px;
   font-weight: 400;
   line-height: 22px;
   color: #ff914d;
 }
+.gallery .devider__line {
+  padding-top: 50px;
+  border-bottom: 1px solid #ebebeb;
+}
+.gallery .slider__item img {
+  width: 225px;
+  height: 150px;
+}
+
+.footer {
+  position: fixed;
+  width: 100%;
+  z-index: 300;
+  bottom: 0;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  border-top-left-radius: 50px;
+  border-top-right-radius: 50px;
+  background-color: #1e1e1e;
+  border-top: 1px solid #595959;
+}
+.footer__wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.footer__reviews button {
+  border-radius: 30px;
+  padding: 12px 20px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  text-transform: uppercase;
+  transition: all 0.5s;
+  border: 1px solid #1e1e1e;
+  outline: none;
+  transition: all 0.5s;
+}
+.footer__reviews button:hover {
+  background: #1e1e1e;
+  color: #fff;
+  border-color: #fff;
+}
+.footer .phone__link {
+  text-decoration: none;
+}
+.footer__phone {
+  border-radius: 30px;
+  padding: 12px 20px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  text-transform: uppercase;
+  transition: all 0.5s;
+  color: #ff914d;
+  background: #333;
+}
+
+.footer--blured {
+  backdrop-filter: blur(10px);
+  background-color: rgba(30, 30, 30, 0.8);
+}
+
+.popup {
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  transform: translateY(-50%);
+  width: 100%;
+  max-height: 800px;
+  height: 100%;
+  background: #fff;
+  border-radius: 30px;
+  overflow-y: scroll;
+  border: none;
+  padding: 30px !important;
+  height: fit-content;
+}
+.popup__header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+  padding-bottom: 30px;
+  border-bottom: 1px solid #ebebeb;
+}
+.popup__title {
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 50px;
+  text-transform: uppercase;
+  color: #333;
+}
+.popup__close i {
+  color: #7d7d7d;
+  font-size: 25px;
+}
+
+.all__reviews .single__review {
+  background: #f6f6f6;
+  padding: 20px;
+  border-radius: 20px;
+}
+.all__reviews .single__review .row {
+  row-gap: 25px;
+}
+.all__reviews .single__review .review__header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.all__reviews .single__review .review__header img {
+  width: 65px;
+  height: 65px;
+  border-radius: 50%;
+}
+.all__reviews .single__review .review__header .author {
+  flex: 1;
+  margin-left: 20px;
+  font-family: Unbounded;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 24.8px;
+}
+.all__reviews .single__review .review__header .stars i {
+  color: #ff914d;
+}
+.all__reviews .single__review .review__header .stars i:not(:last-child) {
+  margin-right: 5px;
+}
+.all__reviews .single__review .review__body p {
+  font-family: "Montserrat";
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 23px;
+  color: #333;
+}
+
+.leave__review p {
+  font-family: Unbounded;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 22px;
+}
+.leave__review .first___step {
+  margin-bottom: 40px;
+}
+.leave__review .first___step .review__value i {
+  color: #ff914d;
+  font-size: 45px;
+}
+.leave__review .first___step .review__value i:not(:last-child) {
+  margin-right: 30px;
+}
+.leave__review .second__step .title {
+  margin-bottom: 30px;
+}
+.leave__review .second__step .review__item {
+  display: flex;
+  flex-direction: column;
+}
+.leave__review .second__step .review__item:not(:last-child) {
+  margin-bottom: 20px;
+}
+.leave__review .second__step .review__item:last-child {
+  margin-bottom: 30px;
+}
+.leave__review .second__step label {
+  font-family: "Montserrat";
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 23px;
+  color: #7d7d7d;
+  margin-bottom: 15px;
+}
+.leave__review .second__step input {
+  border-radius: 10px;
+  background: #f6f6f6;
+  border: none;
+  outline: none;
+  padding: 15px;
+  line-height: 140%;
+}
+.leave__review .second__step .leave__button button {
+  border-radius: 30px;
+  padding: 12px 20px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  text-transform: uppercase;
+  transition: all 0.5s;
+  font-family: Unbounded;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 30px;
+  color: #fff;
+  border: 2px solid #fff;
+  box-shadow: 0px 10px 80px 0px #ff7a2866;
+  background: #ff914d;
+  text-align: center;
+}
+.leave__review .second__step .leave__button button:hover {
+  background: #fff;
+  color: #ff914d;
+  border-color: #ff914d;
+}
+
+.gratitude__popup .popup__header {
+  justify-content: end;
+  padding-bottom: 0px;
+  border-bottom: none;
+}
+.gratitude__popup .gratitude__review {
+  text-align: center;
+}
+.gratitude__popup .gratitude__review p {
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 50px;
+  text-transform: uppercase;
+  color: #333;
+  margin-top: 30px;
+}
 
 .fadeInDown {
   visibility: visible;
-  animation-duration: 1.5s;
+  animation-duration: 1s;
   animation-delay: 0s;
   animation-name: fadeInDown;
 }
