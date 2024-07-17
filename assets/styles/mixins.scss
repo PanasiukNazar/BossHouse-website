@@ -78,14 +78,31 @@
     font-weight: 700;
     line-height: 30px;
     color: #fff;
-    border: 2px solid $white_theme_color;
+    border: 1px solid $main_theme_color;
     box-shadow: 0px 10px 80px 0px #ff7a2866;
-
     background: $main_theme_color;
 
     &:hover {
         background: $white_theme_color;
         color: $main_theme_color;
-        border-color: $main_theme_color;
+        border-color: $white_theme_color;
+    }
+}
+
+@mixin common-transparent-button {
+    @include small-button;
+    font-family: Unbounded;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 22px;
+    border-radius: 8px;
+    color: $main_theme_color;
+    border: 1px solid $main_theme_color;
+    background: transparent;
+
+    &:hover {
+        background: $main_theme_color;
+        color: $white_theme_color;
+        border-color: $white_theme_color;
     }
 }

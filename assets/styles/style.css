@@ -5,12 +5,12 @@
   font-family: "Unbounded", sans-serif;
 }
 
-i {
-  cursor: pointer;
+.main {
+  margin-bottom: 100px;
 }
 
-body {
-  overflow-y: hidden;
+i {
+  cursor: pointer;
 }
 
 .popup::-webkit-scrollbar {
@@ -24,6 +24,21 @@ body {
 }
 
 .popup::-webkit-scrollbar-thumb {
+  background-color: #ff914d;
+  border-radius: 30px;
+}
+
+body::-webkit-scrollbar {
+  width: 5px;
+  height: 70px;
+  padding-top: 50px;
+}
+
+body::-webkit-scrollbar-track {
+  background: none;
+}
+
+body::-webkit-scrollbar-thumb {
   background-color: #ff914d;
   border-radius: 30px;
 }
@@ -126,6 +141,12 @@ body {
   color: #fff;
 }
 .navbar--dark .navbar__info .navbar__cart i {
+  color: #fff;
+}
+.navbar--dark .navbar__menu .navbar__link:nth-child(2)::after {
+  color: #fff;
+}
+.navbar--dark .navbar__menu .navbar__link:nth-child(2)::before {
   color: #fff;
 }
 .navbar--fixed {
@@ -258,10 +279,7 @@ body {
 }
 
 .footer {
-  position: fixed;
   width: 100%;
-  z-index: 300;
-  bottom: 0;
   padding-top: 30px;
   padding-bottom: 30px;
   border-top-left-radius: 50px;
@@ -349,13 +367,13 @@ body {
   font-size: 25px;
 }
 
+.all__reviews .row {
+  row-gap: 25px;
+}
 .all__reviews .single__review {
   background: #f6f6f6;
   padding: 20px;
   border-radius: 20px;
-}
-.all__reviews .single__review .row {
-  row-gap: 25px;
 }
 .all__reviews .single__review .review__header {
   display: flex;
@@ -375,11 +393,11 @@ body {
   font-weight: 700;
   line-height: 24.8px;
 }
+.all__reviews .single__review .review__header .stars:not(:last-child) {
+  margin-right: 5px;
+}
 .all__reviews .single__review .review__header .stars i {
   color: #ff914d;
-}
-.all__reviews .single__review .review__header .stars i:not(:last-child) {
-  margin-right: 5px;
 }
 .all__reviews .single__review .review__body p {
   font-family: "Montserrat";
@@ -447,7 +465,7 @@ body {
   font-weight: 700;
   line-height: 30px;
   color: #fff;
-  border: 2px solid #fff;
+  border: 1px solid #ff914d;
   box-shadow: 0px 10px 80px 0px rgba(255, 122, 40, 0.4);
   background: #ff914d;
   text-align: center;
@@ -455,7 +473,7 @@ body {
 .leave__review .second__step .leave__button button:hover {
   background: #fff;
   color: #ff914d;
-  border-color: #ff914d;
+  border-color: #fff;
 }
 
 .gratitude__popup .popup__header {
@@ -473,6 +491,24 @@ body {
   text-transform: uppercase;
   color: #333;
   margin-top: 30px;
+}
+
+.pre__navigation {
+  margin-top: 50px;
+}
+.pre__navigation .navigation__links a {
+  text-decoration: none;
+  color: #333;
+}
+.pre__navigation .active__page {
+  color: #ff914d;
+}
+
+.devider {
+  height: 1px;
+  width: 100%;
+  background: #ebebeb;
+  margin: 50px 0px;
 }
 
 .fadeInDown {

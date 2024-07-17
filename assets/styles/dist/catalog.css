@@ -1,2 +1,109 @@
 @import url("https://fonts.googleapis.com/css2?family=Unbounded:wght@200..900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+#catalog {
+  row-gap: 30px;
+}
+
+.box {
+  background: #f6f6f6;
+  padding: 10px 25px 10px 10px;
+  border-radius: 20px;
+}
+.box__image {
+  height: 100%;
+}
+.box__image img {
+  border-radius: 15px;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.box__body {
+  padding-top: 15px;
+  padding-top: 5px;
+}
+.box__body .header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+.box__body .header .box__type p {
+  margin-bottom: 10px;
+  font-family: "Montserrat";
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 21px;
+  color: #7d7d7d;
+}
+.box__body .header .box__type h4 {
+  font-family: Unbounded;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 24.8px;
+  color: #333;
+}
+.box__body .box__size {
+  margin-bottom: 20px;
+}
+.box__body .box__size p {
+  margin-bottom: 10px;
+  font-family: "Montserrat";
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 21px;
+  color: #7d7d7d;
+}
+.box__body .box__size .size__items {
+  display: flex;
+  align-items: center;
+}
+.box__body .box__size .size__items .single__size {
+  padding: 10px;
+  background: #edeff0;
+  border-radius: 8px;
+  font-family: "Montserrat";
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 21px;
+}
+.box__body .box__size .size__items .single__size:not(:last-child) {
+  margin-right: 10px;
+}
+.box__body .box__price {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.box__body .box__price p {
+  font-family: "Montserrat";
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 21px;
+  color: #7d7d7d;
+}
+.box__body .box__price .price {
+  border-radius: 30px;
+  padding: 12px 20px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  text-transform: uppercase;
+  transition: all 0.5s;
+  font-family: Unbounded;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 22px;
+  border-radius: 8px;
+  color: #ff914d;
+  border: 1px solid #ff914d;
+  background: transparent;
+}
+.box__body .box__price .price:hover {
+  background: #ff914d;
+  color: #fff;
+  border-color: #fff;
+}
+.box__body .box__price .price .currency {
+  text-transform: lowercase;
+}

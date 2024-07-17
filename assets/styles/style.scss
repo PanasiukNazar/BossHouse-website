@@ -20,12 +20,12 @@ $main_transition: all 0.3s ease-in-out;
     font-family: 'Unbounded', sans-serif;
 }
 
-i {
-    cursor: pointer;
+.main {
+    margin-bottom: 100px;
 }
 
-body {
-    overflow-y: hidden;
+i {
+    cursor: pointer;
 }
 
 .popup::-webkit-scrollbar {
@@ -39,6 +39,21 @@ body {
 }
 
 .popup::-webkit-scrollbar-thumb {
+    background-color: $main_theme_color;
+    border-radius: 30px;
+}
+
+body::-webkit-scrollbar {
+    width: 5px;
+    height: 70px;
+    padding-top: 50px;
+}
+
+body::-webkit-scrollbar-track {
+    background: none;
+}
+
+body::-webkit-scrollbar-thumb {
     background-color: $main_theme_color;
     border-radius: 30px;
 }
@@ -131,6 +146,16 @@ body {
             }
             .navbar__cart {
                 i {
+                    color: $white_theme_color;
+                }
+            }
+        }
+        .navbar__menu {
+            .navbar__link {
+                &:nth-child(2)::after {
+                    color: $white_theme_color;
+                }
+                &:nth-child(2)::before {
                     color: $white_theme_color;
                 }
             }
@@ -253,10 +278,7 @@ body {
 // footer start
 
 .footer {
-    position: fixed;
     width: 100%;
-    z-index: 300;
-    bottom: 0;
     padding-top: 30px;
     padding-bottom: 30px;
     border-top-left-radius: 50px;
@@ -350,13 +372,14 @@ body {
 // popup ALL reviews start
 
 .all__reviews {
+    .row {
+        row-gap: 25px;
+    }
     .single__review {
         background: #f6f6f6;
         padding: 20px;
         border-radius: 20px;
-        .row {
-            row-gap: 25px;
-        }
+
         .review__header {
             display: flex;
             align-items: center;
@@ -375,10 +398,10 @@ body {
                 line-height: 24.8px;
             }
             .stars {
+                &:not(:last-child) {
+                    margin-right: 5px;
+                }
                 i {
-                    &:not(:last-child) {
-                        margin-right: 5px;
-                    }
                     color: $main_theme_color;
                 }
             }
@@ -484,6 +507,30 @@ body {
     }
 }
 // popup GRATITUDE reviews end
+
+// popup NAVIGATION DEVIDER end
+
+.pre__navigation {
+    margin-top: 50px;
+    .navigation__links {
+        a {
+            text-decoration: none;
+            color: #333;
+        }
+    }
+    .active__page {
+        color: $main_theme_color;
+    }
+}
+
+.devider {
+    height: 1px;
+    width: 100%;
+    background: #ebebeb;
+    margin: 50px 0px;
+}
+
+// popup NAVIGATION DEVIDER end
 
 //  animations start
 .fadeInDown {
