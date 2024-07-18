@@ -1,0 +1,303 @@
+// text colors
+$white_theme_color: #fff;
+$dark_theme_color: #1e1e1e;
+$main_theme_color: #ff914d;
+
+// text sizes
+$text: 16px;
+
+// text hights
+$text_hight: 20px;
+
+// transitions
+$main_transition: all 0.3s ease-in-out;
+
+@import url('https://fonts.googleapis.com/css2?family=Unbounded:wght@200..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import 'mixins.scss';
+
+.single__box {
+    .images__slider {
+        margin-bottom: 50px;
+        .preview__image {
+        }
+    }
+    .delivery__content {
+        .price {
+            font-size: 40px;
+            font-weight: 700;
+            line-height: 50px;
+            color: $main_theme_color;
+            text-align: center;
+            margin-bottom: 30px;
+
+            .currency {
+                text-transform: lowercase;
+            }
+        }
+
+        .memo {
+            display: flex;
+            align-items: start;
+            padding-bottom: 30px;
+            border-bottom: 1px solid #ebebeb;
+            margin-bottom: 30px;
+            &__icon {
+                width: 24px;
+                height: 24px;
+                margin-right: 15px;
+            }
+            &__info {
+                h4 {
+                    font-size: 18px;
+                    font-weight: 700;
+                    line-height: 22.32px;
+                }
+                span {
+                    font-family: 'Montserrat';
+                    font-size: 18px;
+                    font-weight: 500;
+                    line-height: 21px;
+                    color: #7d7d7d;
+                }
+            }
+        }
+    }
+    .box__description {
+        h6 {
+            font-family: 'Montserrat';
+            font-size: 18px;
+            font-weight: 500;
+            line-height: 21px;
+            color: #7d7d7d;
+            margin-bottom: 20px;
+        }
+        .description__item {
+            &:not(:last-child) {
+                margin-bottom: 7px;
+            }
+            img {
+                width: 15px;
+                height: 15px;
+                margin-right: 10px;
+            }
+        }
+    }
+
+    .single__header {
+        display: flex;
+        align-items: start;
+        justify-content: space-between;
+
+        .single__type {
+            padding-bottom: 30px;
+            border-bottom: 1px solid #ebebeb;
+            margin-bottom: 30px;
+            span {
+                font-family: 'Montserrat';
+                font-size: 18px;
+                font-weight: 500;
+                line-height: 21px;
+                color: #7d7d7d;
+            }
+            h3 {
+                font-size: 40px;
+                font-weight: 700;
+                line-height: 50px;
+                text-transform: uppercase;
+                margin-top: 15px;
+            }
+        }
+        .availability {
+            p {
+                font-size: 18px;
+                font-weight: 700;
+                line-height: 21px;
+                font-family: 'Montserrat';
+            }
+        }
+    }
+
+    .single__body {
+        margin-bottom: 50px;
+        .box__size {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 30px;
+            span {
+                font-family: 'Montserrat';
+                font-size: 18px;
+                font-weight: 500;
+                line-height: 21px;
+                color: #7d7d7d;
+                margin-bottom: 20px;
+            }
+
+            .select {
+                position: relative;
+                .first__option,
+                .second__option {
+                    font-family: 'Montserrat';
+                    font-size: 18px;
+                    font-weight: 500;
+                    line-height: 21px;
+                    border-radius: 10px;
+                    background: #f6f6f6;
+                    padding: 18px 20px;
+                    width: 100%;
+                }
+
+                .select__opener {
+                    position: absolute;
+                    top: 18px;
+                    right: 20px;
+
+                    i {
+                        color: #c0c0c0;
+                    }
+                }
+
+                &.active {
+                    .first__option {
+                        margin-bottom: 5px;
+                    }
+
+                    .first__option,
+                    .second__option {
+                        border: 1px solid $main_theme_color;
+                    }
+
+                    .select__opener {
+                        transform: rotate(180deg);
+                    }
+                }
+            }
+        }
+
+        .box__material {
+            margin-bottom: 30px;
+            span {
+                display: inline-block;
+                font-family: 'Montserrat';
+                font-size: 18px;
+                font-weight: 500;
+                line-height: 21px;
+                color: #7d7d7d;
+                margin-bottom: 20px;
+            }
+            p {
+                font-family: 'Montserrat';
+                font-size: 18px;
+                font-weight: 500;
+                line-height: 21px;
+                margin-bottom: 0;
+            }
+        }
+
+        .box__color {
+            span {
+                display: inline-block;
+                font-family: 'Montserrat';
+                font-size: 18px;
+                font-weight: 500;
+                line-height: 21px;
+                color: #7d7d7d;
+                margin-bottom: 20px;
+            }
+            .color__options {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                .checkbox__wrapper {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+
+                    .checkbox {
+                        margin-bottom: 15px;
+                        i {
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            height: 20px;
+                            width: 20px;
+                            font-size: 16px;
+                            color: $white_theme_color;
+                            border: 2px solid #d0d5dd;
+                            border-radius: 6px;
+                        }
+                        &.checked {
+                            i {
+                                background: $main_theme_color;
+                                border: none;
+                            }
+                        }
+                    }
+
+                    label {
+                        font-family: 'Montserrat';
+                        font-size: 18px;
+                        font-weight: 500;
+                        line-height: 21px;
+                        text-align: center;
+                    }
+                }
+            }
+        }
+    }
+
+    .single__footer {
+        text-align: center;
+        .actions {
+            margin-bottom: 30px;
+            .buy__ation {
+                @include common-button;
+                background: #45ba89;
+                border-color: #45ba89;
+                box-shadow: 0px 10px 80px 0px #45ba8966;
+                font-size: 24px;
+                font-weight: 700;
+                line-height: 30px;
+                padding-left: 40px;
+                padding-right: 40px;
+                margin-right: 30px;
+
+                &:hover {
+                    color: #45ba89;
+                    border-color: #45ba89;
+                }
+            }
+            .contact__ation {
+                @include common-button;
+                background: $white_theme_color;
+                color: $main_theme_color;
+                font-size: 18px;
+                font-weight: 700;
+                line-height: 21px;
+                padding: 15px 40px;
+                box-shadow: none;
+
+                &:hover {
+                    color: $white_theme_color;
+                    background: $main_theme_color;
+                }
+            }
+        }
+        .more__info__wrapper {
+            .more__info {
+                font-size: 18px;
+                font-weight: 400;
+                line-height: 21px;
+                text-decoration: none;
+                color: $main_theme_color;
+                border-bottom: 0.5px solid $main_theme_color;
+                cursor: pointer;
+            }
+            i {
+                margin-left: 30px;
+                color: $main_theme_color;
+            }
+        }
+    }
+}

@@ -23,7 +23,7 @@ const info = [
             'Без гострих кутів.',
             'На пластикових опорах.',
             'Передбачено зручний доступ через дах.',
-            'Фарбована в 2 шари.',
+            'Фарбується в 2 шари.',
             'Силіконова шторка в комплекті.',
         ],
     },
@@ -65,15 +65,15 @@ const boxes = info.map((singleBox) => {
                     ${singleBox.price} <span class='currency'>грн</span>
                 </div>
                 <div class="memo">
-                    <img src="/assets/images/icons/delivery-icon.png" alt="" />
-                    <div class="delivery__info">
+                    <img class="memo__icon" src="/assets/images/icons/delivery-icon.png" alt="" />
+                    <div class="memo__info">
                         <h4>Доставка по Україні</h4>
                         <span>за тарифами перевізника в межах 200 - 400 грн</span>
                     </div>
                 </div>
             </div>
             <div class="box__description">
-                <h5>Опис</h5>
+                <h6>Опис</h6>
                 ${description}
             </div>
         </div>
@@ -82,9 +82,9 @@ const boxes = info.map((singleBox) => {
             <div class="single__header">
                 <div class="single__type">
                     <span>${singleBox.type}</span>
-                    <h3>${singleBox.name}</h3>
+                    <h3>"${singleBox.name}"</h3>
                 </div>
-                <div>
+                <div class="availability">
                     ${isAvailable}
                 </div>
             </div>
@@ -92,10 +92,17 @@ const boxes = info.map((singleBox) => {
             <div class="single__body">
                 <div class="box__size">
                     <span>Розмір:</span>
-                    <select>
-                        <option>${singleBox.size.small.join(' ')}</option>
-                        <option>${singleBox.size.big.join(' ')}</option>
-                    </select>
+                    <div class="select active">
+                        <div class="select__options">
+                            <div class="first__option">${singleBox.size.small.join(
+                                ' ',
+                            )}</div>
+                            <div class="second__option">${singleBox.size.big.join(
+                                ' ',
+                            )}</div>
+                        </div>
+                        <div class="select__opener"><i class="bi bi-chevron-down"></i></div>
+                    </div>
                 </div>
                 <div class="box__material">
                     <span>Матеріал:</span>
@@ -104,25 +111,46 @@ const boxes = info.map((singleBox) => {
                 <div class="box__color">
                     <span>Колір:</span>
                     <div class="color__options">
-                        <input type="checkbox" id="color1"/>
-                        <label for="color1">Не фарбована</label>
-    
-                        <input type="checkbox" id="color2"/>
-                        <label for="color2">Світлий Дуб</label>
-    
-                        <input type="checkbox" id="color3"/>
-                        <label for="color3">Темний Дуб</label>
-    
-                        <input type="checkbox" id="color4"/>
-                        <label for="color4">Сосна</label>
+                        <div class="checkbox__wrapper">
+                            <div class="checkbox checked">
+                                <i class="bi bi-check2"></i>
+                            </div>
+                            <label for="color1">Не фарбована</label>
+                        </div>
+                        <div class="checkbox__wrapper">
+                            <div class="checkbox">
+                                <i class="bi bi-check2"></i>
+                            </div>
+                            <label for="color2">Світлий Дуб</label>
+                        </div>
+                        <div class="checkbox__wrapper">
+                            <div class="checkbox">
+                                <i class="bi bi-check2"></i>
+                            </div>
+                            <label for="color3">Темний Дуб</label>
+                        </div>
+                        <div class="checkbox__wrapper">
+                            <div class="checkbox">
+                                <i class="bi bi-check2"></i>
+                            </div>
+                            <label for="color4">Сосна</label>
+                        </div>
                     </div>
                 </div>
             </div>
             <div class="single__footer">
                 <div class="actions">
-                    <!-- Add any action buttons or links here -->
+                    <button class="buy__ation">
+                        <i class="bi bi-cart-fill"></i> Купити
+                    </button>
+                    <button class="contact__ation">
+                       <i class="bi bi-telephone-fill"></i> Контакти
+                    </button>
                 </div>
-                <a class="more__info">Більше інформації <i class="bi bi-heart-fill"></i></a>
+                <div class="more__info__wrapper">
+                    <a class="more__info">Більше інформації</a>
+                    <i class="bi bi-heart"></i>
+                </div>
             </div>
         </div>
     `;
