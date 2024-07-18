@@ -51,7 +51,7 @@ const boxes = info.map((singleBox) => {
 
     const isAvailable = singleBox.available
         ? `<p style="color: #45BA89;">В Наявності</p>`
-        : `<p style="color: #d20000;">Немає В Наявності</p>`;
+        : `<p style="color: #EE6464;">Немає В Наявності</p>`;
 
     return `
         <div class="col-md-6">

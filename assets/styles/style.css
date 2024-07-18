@@ -493,6 +493,184 @@ body::-webkit-scrollbar-thumb {
   margin-top: 30px;
 }
 
+.cart__popup .product {
+  display: flex;
+  align-items: start;
+}
+.cart__popup .cart__image {
+  margin-right: 30px;
+}
+.cart__popup .cart__image img {
+  max-height: 230px;
+  max-width: 230px;
+  border: 6px solid #f6f6f6;
+  border-radius: 20px;
+}
+.cart__popup .product__body {
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+  width: 100%;
+}
+.cart__popup .product__body .product__info .product__type,
+.cart__popup .product__body .product__info .product__name {
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 22px;
+  text-transform: uppercase;
+}
+.cart__popup .product__body .product__info .product__size {
+  display: flex;
+  margin-top: 20px;
+}
+.cart__popup .product__body .product__info .product__size .single__size {
+  padding: 10px;
+  background: #edeff0;
+  border-radius: 8px;
+  font-family: "Montserrat";
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 21px;
+}
+.cart__popup .product__body .product__info .product__size .single__size:not(:last-child) {
+  margin-right: 10px;
+}
+.cart__popup .product__body .product__details {
+  display: flex;
+  align-items: center;
+  -moz-column-gap: 50px;
+       column-gap: 50px;
+}
+.cart__popup .product__body .product__details .product__quantity {
+  display: flex;
+  align-items: center;
+}
+.cart__popup .product__body .product__details .product__quantity .product__remove,
+.cart__popup .product__body .product__details .product__quantity .product__add {
+  font-family: "Montserrat";
+  font-size: 34px;
+  font-weight: 500;
+  line-height: 41px;
+  color: #7d7d7d;
+  cursor: pointer;
+}
+.cart__popup .product__body .product__details .product__quantity .product__current {
+  background: #f6f6f6;
+  border-radius: 10px;
+  padding: 18px 25px;
+  font-family: "Montserrat";
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 21px;
+  margin: 0 15px;
+}
+.cart__popup .product__body .product__details .product__price {
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 22px;
+  color: #ff914d;
+}
+.cart__popup .product__body .product__details .product__delete {
+  display: flex;
+  align-items: center;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 15px;
+  color: #ee6464;
+  cursor: pointer;
+}
+.cart__popup .product__body .product__details .product__delete i {
+  font-size: 15px;
+  margin-right: 15px;
+}
+
+.cart__footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 40px;
+}
+.cart__footer .keep__shoping button {
+  border-radius: 30px;
+  padding: 12px 20px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  text-transform: uppercase;
+  transition: all 0.5s;
+  font-family: Unbounded;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 30px;
+  color: #fff;
+  border: 1px solid #ff914d;
+  box-shadow: 0px 10px 80px 0px rgba(255, 122, 40, 0.4);
+  background: #ff914d;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 20px;
+  color: #7d7d7d;
+  box-shadow: none;
+  background: #f6f6f6;
+  border: none;
+  padding: 25px 40px;
+}
+.cart__footer .keep__shoping button:hover {
+  background: #fff;
+  color: #ff914d;
+  border-color: #fff;
+}
+.cart__footer .keep__shoping button:hover {
+  background: #e0e0e0;
+  color: #7d7d7d;
+}
+.cart__footer .order {
+  display: flex;
+  align-items: center;
+}
+.cart__footer .order .total__price {
+  margin-right: 30px;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 30px;
+  color: #ff914d;
+}
+.cart__footer .order .make__out button {
+  border-radius: 30px;
+  padding: 12px 20px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  text-transform: uppercase;
+  transition: all 0.5s;
+  font-family: Unbounded;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 30px;
+  color: #fff;
+  border: 1px solid #ff914d;
+  box-shadow: 0px 10px 80px 0px rgba(255, 122, 40, 0.4);
+  background: #ff914d;
+  background: #45ba89;
+  border-color: #45ba89;
+  box-shadow: 0px 10px 80px 0px rgba(69, 186, 137, 0.4);
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 30px;
+  padding: 25px 40px;
+  border-radius: 60px;
+  margin-right: 30px;
+}
+.cart__footer .order .make__out button:hover {
+  background: #fff;
+  color: #ff914d;
+  border-color: #fff;
+}
+.cart__footer .order .make__out button:hover {
+  color: #45ba89;
+  border-color: #45ba89;
+}
+
 .pre__navigation {
   margin-top: 50px;
 }
