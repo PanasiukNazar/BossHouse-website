@@ -9,8 +9,12 @@ dialog(class="popup container")
             i(class="bi bi-x-lg")
 
     div(class="popup__body")
-        div(class="all__reviews")
-            div(class="row" id="all-reviews")
+        div(class="all__reviews" style="display: none")
+            div(class="all_review_wrapper")
+                div(class="row" id="all-reviews")
+
+                div(class="leave__button")
+                    button залишити відгук
                             
         div(class="leave__review" style="display: none")
             div(class="first___step")
@@ -37,7 +41,7 @@ dialog(class="popup container")
 
                     div(class="leave__button")
                         button залишити відгук
-
+ 
 
 dialog(class="gratitude__popup popup container" style="display: none")
     div(class="popup__header")

@@ -157,7 +157,6 @@ body::-webkit-scrollbar-thumb {
 .navbar--fixed .logo--light {
   display: none;
 }
-
 .hero__wrapper {
   position: relative;
   height: 100vh;
@@ -255,7 +254,94 @@ body::-webkit-scrollbar-thumb {
   right: 0;
   bottom: 0;
 }
+.hero__image img {
+  width: 550px;
+}
 
+@media (max-width: 1200px) {
+  .hero__title {
+    font-size: 70px;
+    font-weight: 700;
+    line-height: 70px;
+  }
+  .hero__text {
+    font-size: 30px !important;
+  }
+  .hero__button {
+    border-radius: 30px;
+    padding: 12px 20px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    text-transform: uppercase;
+    transition: all 0.5s;
+    display: flex;
+    align-items: center;
+    background: #ff914d;
+    padding: 4px 30px 4px 4px;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 30px;
+    text-transform: uppercase;
+    outline: none;
+    border: none;
+    border-radius: 60px;
+    font-size: 16px;
+  }
+  .hero__button .button__icon {
+    margin-right: 20px;
+    transition: all 0.2s ease-in;
+  }
+  .hero__button .button__icon i {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 32px;
+    color: #ff914d;
+    background-color: #131315;
+    border-radius: 50%;
+    height: 70px;
+    width: 70px;
+  }
+  .hero__button:hover .button__icon {
+    transform: rotate(90deg);
+    transition: all 0.2s ease-out;
+  }
+
+  .hero__image img {
+    width: 420px;
+  }
+}
+@media (max-width: 992px) {
+  .hero__title {
+    font-family: Unbounded;
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 49.6px;
+  }
+  .hero__title span {
+    color: #ff914d;
+  }
+  .hero__text {
+    font-size: 40px;
+    line-height: 50px;
+    font-weight: 300;
+    background: linear-gradient(to right, #ffffff, #787878);
+    background-clip: text;
+    color: transparent;
+    text-transform: uppercase;
+    margin-bottom: 80px;
+  }
+  .hero__text span {
+    background: linear-gradient(to right, #4173cd, #ffe15a);
+    background-clip: text;
+    color: transparent;
+  }
+
+  .hero__image {
+    display: none;
+  }
+}
 .gallery {
   height: 700px;
   margin-top: -40px;
@@ -326,6 +412,17 @@ body::-webkit-scrollbar-thumb {
   background-color: rgba(30, 30, 30, 0.8);
 }
 
+@media (max-width: 992px) {
+  .footer__wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: start;
+  }
+  .footer__wrapper .footer__reviews {
+    margin-bottom: 25px;
+  }
+}
 .popup {
   display: block;
   position: absolute;
@@ -374,13 +471,19 @@ body::-webkit-scrollbar-thumb {
   display: flex;
   align-items: center;
   margin-bottom: 20px;
+  width: 100%;
 }
 .all__reviews .single__review .review__header img {
   width: 65px;
   height: 65px;
   border-radius: 50%;
 }
-.all__reviews .single__review .review__header .author {
+.all__reviews .single__review .review__header .author__bio {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+.all__reviews .single__review .review__header .author__bio .author {
   flex: 1;
   margin-left: 20px;
   font-family: Unbounded;
@@ -388,10 +491,13 @@ body::-webkit-scrollbar-thumb {
   font-weight: 700;
   line-height: 24.8px;
 }
-.all__reviews .single__review .review__header .stars:not(:last-child) {
+.all__reviews .single__review .review__header .author__bio .reviews__wrapper {
+  display: flex;
+}
+.all__reviews .single__review .review__header .author__bio .reviews__wrapper .stars:not(:last-child) {
   margin-right: 5px;
 }
-.all__reviews .single__review .review__header .stars i {
+.all__reviews .single__review .review__header .author__bio .reviews__wrapper .stars i {
   color: #ff914d;
 }
 .all__reviews .single__review .review__body p {
@@ -401,7 +507,102 @@ body::-webkit-scrollbar-thumb {
   line-height: 23px;
   color: #333;
 }
+.all__reviews .leave__button {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+.all__reviews .leave__button button {
+  border-radius: 30px;
+  padding: 12px 20px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  text-transform: uppercase;
+  transition: all 0.5s;
+  font-family: Unbounded;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 30px;
+  color: #fff;
+  border: 1px solid #ff914d;
+  box-shadow: 0px 10px 80px 0px #ff7a2866;
+  background: #ff914d;
+  text-align: center;
+}
+.all__reviews .leave__button button:hover {
+  background: #fff;
+  color: #ff914d;
+  border-color: #fff;
+}
 
+@media (max-width: 992px) {
+  .all__reviews .single__review .review__header {
+    display: flex;
+    align-items: center;
+  }
+  .all__reviews .single__review .review__header img {
+    width: 45px;
+    height: 45px;
+  }
+  .all__reviews .single__review .review__header .author__bio {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    width: 100%;
+    margin-left: 15px;
+  }
+  .all__reviews .single__review .review__header .author__bio .author {
+    font-size: 16px;
+    line-height: 20px;
+    margin-left: 0;
+  }
+  .all__reviews .single__review .review__header .author__bio .reviews__wrapper {
+    display: flex;
+  }
+  .all__reviews .single__review .review__header .author__bio .reviews__wrapper .stars:not(:last-child) {
+    margin-right: 5px;
+  }
+  .all__reviews .single__review .review__header .author__bio .reviews__wrapper .stars i {
+    color: #ff914d;
+  }
+  .all__reviews .single__review .review__body p {
+    font-family: "Montserrat";
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 23px;
+    color: #333;
+  }
+  .all__reviews .leave__button {
+    display: flex;
+    justify-content: center;
+  }
+  .all__reviews .leave__button button {
+    border-radius: 30px;
+    padding: 12px 20px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    text-transform: uppercase;
+    transition: all 0.5s;
+    font-family: Unbounded;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 30px;
+    color: #fff;
+    border: 1px solid #ff914d;
+    box-shadow: 0px 10px 80px 0px #ff7a2866;
+    background: #ff914d;
+    text-align: center;
+    font-size: 16px;
+    width: 100%;
+  }
+  .all__reviews .leave__button button:hover {
+    background: #fff;
+    color: #ff914d;
+    border-color: #fff;
+  }
+}
 .leave__review p {
   font-family: Unbounded;
   font-size: 18px;
@@ -447,6 +648,10 @@ body::-webkit-scrollbar-thumb {
   padding: 15px;
   line-height: 140%;
 }
+.leave__review .second__step .leave__button {
+  display: flex;
+  justify-content: center;
+}
 .leave__review .second__step .leave__button button {
   border-radius: 30px;
   padding: 12px 20px;
@@ -471,6 +676,53 @@ body::-webkit-scrollbar-thumb {
   border-color: #fff;
 }
 
+@media (max-width: 992px) {
+  .leave__review p {
+    font-size: 16px;
+  }
+  .leave__review .first___step .review__value i {
+    color: #ff914d;
+    font-size: 25px;
+  }
+  .leave__review .second__step .title {
+    margin-bottom: 30px;
+  }
+  .leave__review .second__step .review__item {
+    display: flex;
+    flex-direction: column;
+  }
+  .leave__review .second__step .review__item:not(:last-child) {
+    margin-bottom: 20px;
+  }
+  .leave__review .second__step .review__item:last-child {
+    margin-bottom: 30px;
+  }
+  .leave__review .second__step .leave__button button {
+    border-radius: 30px;
+    padding: 12px 20px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    text-transform: uppercase;
+    transition: all 0.5s;
+    font-family: Unbounded;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 30px;
+    color: #fff;
+    border: 1px solid #ff914d;
+    box-shadow: 0px 10px 80px 0px #ff7a2866;
+    background: #ff914d;
+    text-align: center;
+    font-size: 16px;
+    width: 100%;
+  }
+  .leave__review .second__step .leave__button button:hover {
+    background: #fff;
+    color: #ff914d;
+    border-color: #fff;
+  }
+}
 .gratitude__popup .popup__header {
   justify-content: end;
   padding-bottom: 0px;

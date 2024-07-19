@@ -68,9 +68,15 @@ const posts = data.map((review) => {
         <div class="col-md-6">
             <div class="single__review">
                 <div class="review__header">
-                    <img src="${review.image}" alt="" />
-                    <h4 class="author">${review.author}</h4>
-                    ${stars}
+                    <div class="author__image">
+                        <img src="${review.image}" alt="" />
+                    </div>
+                    <div class="author__bio">
+                        <h4 class="author">${review.author}</h4>
+                        <div class="reviews__wrapper">
+                            ${stars}
+                        </div>
+                    </div>
                 </div>
                 <div class="review__body">
                     <p>
