@@ -1,0 +1,46 @@
+// text colors
+$white_theme_color: #fff;
+$dark_theme_color: #1e1e1e;
+$main_theme_color: #ff914d;
+
+// text sizes
+$text: 16px;
+
+// text hights
+$text_hight: 20px;
+
+// transitions
+$main_transition: all 0.3s ease-in-out;
+
+@import url('https://fonts.googleapis.com/css2?family=Unbounded:wght@200..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import 'mixins.scss';
+
+.thanks__page {
+    text-align: center;
+    h3 {
+        margin-top: 120px;
+        font-size: 40px;
+        font-weight: 500;
+        line-height: 50px;
+        color: $white_theme_color;
+        text-transform: uppercase;
+        background: $main_theme_color;
+        padding: 20px 40px;
+        border-radius: 80px;
+        margin-bottom: 20px;
+    }
+    span {
+        display: inline-block;
+        font-family: 'Montserrat';
+        font-size: 20px;
+        font-weight: 700;
+        line-height: 27px;
+        margin-bottom: 50px;
+    }
+
+    img {
+        border-radius: 30px;
+        margin-bottom: 120px;
+    }
+}

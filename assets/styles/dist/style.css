@@ -683,6 +683,126 @@ body::-webkit-scrollbar-thumb {
   margin: 50px 0px;
 }
 
+.delivery__payments h3 {
+  text-align: center;
+  font-size: 40px;
+  font-weight: 500;
+  line-height: 50px;
+  text-transform: uppercase;
+  margin-top: 50px;
+  margin-bottom: 30px;
+}
+.delivery__payments .payments {
+  margin-bottom: 40px;
+}
+.delivery__payments .payments h4 {
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 22px;
+  margin-bottom: 20px;
+}
+.delivery__payments .payments span {
+  display: inline-block;
+  font-family: "Montserrat";
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 21px;
+  color: #7d7d7d;
+  margin-bottom: 15px;
+}
+.delivery__payments .payments p {
+  font-family: "Montserrat";
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 21px;
+  color: #7d7d7d;
+  margin-bottom: 10px;
+}
+.delivery__payments .payments p:last-child {
+  margin-bottom: 0px;
+}
+.delivery__payments .delivery h4 {
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 22px;
+  margin-bottom: 20px;
+}
+.delivery__payments .delivery p {
+  font-family: "Montserrat";
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 21px;
+  color: #7d7d7d;
+  margin-bottom: 10px;
+}
+.delivery__payments .delivery p:last-child {
+  margin-bottom: 0px;
+}
+
+.refund__policy h3 {
+  text-align: center;
+  font-size: 40px;
+  font-weight: 500;
+  line-height: 50px;
+  text-transform: uppercase;
+  margin-top: 50px;
+  margin-bottom: 30px;
+}
+.refund__policy span {
+  display: inline-block;
+  font-family: "Montserrat";
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 21px;
+  color: #7d7d7d;
+  margin-bottom: 15px;
+}
+.refund__policy p {
+  font-family: "Montserrat";
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 30px;
+  color: #ff914d;
+}
+.refund__policy p:not(:last-child) {
+  margin-bottom: 30px;
+}
+
+.contacts h3 {
+  text-align: center;
+  font-size: 40px;
+  font-weight: 500;
+  line-height: 50px;
+  text-transform: uppercase;
+  margin-top: 50px;
+  margin-bottom: 30px;
+}
+.contacts .row:not(:last-child) {
+  border-bottom: 1px solid #ebebeb;
+  padding-bottom: 30px;
+  margin-bottom: 30px;
+}
+.contacts .label {
+  margin-bottom: 15px;
+}
+.contacts .label i {
+  color: #ff914d;
+  font-size: 18px;
+}
+.contacts .label span {
+  font-family: "Montserrat";
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 22px;
+  margin-left: 6px;
+  color: #7d7d7d;
+}
+.contacts .label__value {
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 22px;
+}
+
 .fadeInDown {
   visibility: visible;
   animation-duration: 1s;

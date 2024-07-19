@@ -18,7 +18,7 @@
         <div class="navbar__logo logo--dark"><img src="/assets/images/logo-dark-nb.png" alt=""></div>
         <div class="navbar__menu">
           <div class="navbar__link"><a href="index.html"> Головна</a></div>
-          <div class="navbar__link"><a href="">Доставка/оплата</a></div>
+          <div class="navbar__link"><a href="delivery-and-payment-page.html">Доставка/оплата</a></div>
           <div class="navbar__link"><a href="">Повернення/обмін</a></div>
         </div>
         <div class="navbar__info">
@@ -64,7 +64,7 @@
                 <div class="delivery__info">
                   <div class="client__city"><span>Місто</span>
                     <div class="city__list"> 
-                      <div class="city"></div><i class="bi bi-chevron-down"></i>
+                      <input class="city" type="text"><i class="bi bi-chevron-down"></i>
                     </div>
                   </div>
                 </div>
@@ -76,7 +76,7 @@
                     </div>
                     <div class="availabel__departments"><span>Виберіть відповідне відділення</span>
                       <div class="department__list">
-                        <div class="department"></div><i class="bi bi-chevron-down"></i>
+                        <input class="department" type="text"><i class="bi bi-chevron-down"></i>
                       </div>
                     </div>
                   </div>
@@ -87,13 +87,13 @@
                     </div>
                     <div class="availabel__departments"><span>Введіть адрес доставки</span>
                       <div class="client__address">
-                        <div class="street"><span>Вулиця</span>
+                        <div class="address__item"><span>Вулиця</span>
                           <input type="text">
                         </div>
-                        <div class="house"><span>Будинок</span>
+                        <div class="address__item"><span>Будинок</span>
                           <input type="text">
                         </div>
-                        <div class="flat"><span>Квартира</span>
+                        <div class="address__item"><span>Квартира</span>
                           <input type="text">
                         </div>
                       </div>
@@ -106,7 +106,7 @@
                     </div>
                     <div class="availabel__departments"><span>Виберіть відповідне відділення</span>
                       <div class="department__list">
-                        <div class="department"></div><i class="bi bi-chevron-down"></i>
+                        <input class="department" type="text"><i class="bi bi-chevron-down"></i>
                       </div>
                     </div>
                   </div>
@@ -117,13 +117,13 @@
                     </div>
                     <div class="availabel__departments"><span>Введіть адрес доставки</span>
                       <div class="client__address">
-                        <div class="street"><span>Вулиця</span>
+                        <div class="address__item"><span>Вулиця</span>
                           <input type="text">
                         </div>
-                        <div class="house"><span>Будинок</span>
+                        <div class="address__item"><span>Будинок</span>
                           <input type="text">
                         </div>
-                        <div class="flat"><span>Квартира</span>
+                        <div class="address__item"><span>Квартира</span>
                           <input type="text">
                         </div>
                       </div>
@@ -131,13 +131,13 @@
                   </div>
                 </div>
                 <div class="order__comment"><span>Коментарій до замовлення</span>
-                  <input type="textarea">
+                  <textarea></textarea>
                 </div>
                 <div class="client__payment">
                   <h5 class="checkout__title">3. Оплата</h5>
                   <div class="pyment__option">
-                    <div class="checkout__checkbox">1</div>
-                    <h5 class="checkout__title">Безготівковий розрахунок</h5>
+                    <div class="checkout__checkbox checked"><span></span></div>
+                    <h5 class="checkout__title">Самовивіз із Нової Пошти</h5>
                   </div>
                 </div>
               </div>

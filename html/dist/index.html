@@ -17,7 +17,7 @@
         <div class="navbar__logo logo--dark"><img src="/assets/images/logo-dark-nb.png" alt=""></div>
         <div class="navbar__menu">
           <div class="navbar__link"><a href="index.html"> Головна</a></div>
-          <div class="navbar__link"><a href="">Доставка/оплата</a></div>
+          <div class="navbar__link"><a href="delivery-and-payment-page.html">Доставка/оплата</a></div>
           <div class="navbar__link"><a href="">Повернення/обмін</a></div>
         </div>
         <div class="navbar__info">
@@ -97,18 +97,28 @@
         </div>
       </div>
     </dialog>
-    <dialog class="popup container">
+    <dialog class="popup container" style="display: none">
       <div class="popup__header">
         <div class="popup__title">Кошик</div>
         <div class="popup__close"><i class="bi bi-x-lg"></i></div>
       </div>
       <div class="popup__body">
-        <div class="all__reviews">
-          <div class="row" id="all-reviews"></div>
-          <script src="/js/custom.js"></script>
-          <script src="/js/catalog.js"></script>
-          <script src="/js/reviews.js"></script>
-          <script src="/js/cart.js"></script>
+        <div class="cart__popup" id="cart"></div>
+        <div class="cart__footer">
+          <div class="keep__shoping">
+            <button>Продовжити покупки</button>
+          </div>
+          <div class="order">
+            <div class="total__price"><span>4900 грн</span></div>
+            <div class="make__out">
+              <button>Оформити замовлення
+                <script src="/js/custom.js"></script>
+                <script src="/js/catalog.js"></script>
+                <script src="/js/reviews.js"></script>
+                <script src="/js/cart.js"></script>
+              </button>
+            </div>
+          </div>
         </div>
       </div>
     </dialog>

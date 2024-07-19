@@ -1,0 +1,31 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title BossHouse
+        link(rel="stylesheet", href="/assets/styles/style.css")
+        link(rel="stylesheet", href="/assets/styles/thanks.css")
+        link(rel="stylesheet", href="/assets/styles/animate.css-master/animate.min.css")
+        link(rel="stylesheet", href="/assets/images/logo-white-nb.png")
+        link(rel="stylesheet", href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css")
+        link(rel="stylesheet", href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css")
+    body(style="height: 100vh; display: flex; flex-direction: column")
+        include includes/navbar-dark
+
+        div(class="main" style="flex: 1")
+            div(class="container")
+                div(class="row")
+                    div(class="thanks__page")
+                        h3 Дякуємо за замовлення!
+                        span Ми зателефонуємо вам найближчим часом
+
+                        div(class="thanks__image")
+                            img(src="/assets/images/thanks.gif")
+
+        include includes/footer-dark
+        include includes/cart-popup
+          
+            script(src="/js/custom.js")
+            script(src="/js/cart.js")
+

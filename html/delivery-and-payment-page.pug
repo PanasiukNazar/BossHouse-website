@@ -1,0 +1,38 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title BossHouse
+        link(rel="stylesheet", href="/assets/styles/style.css")
+        link(rel="stylesheet", href="/assets/styles/animate.css-master/animate.min.css")
+        link(rel="stylesheet", href="/assets/images/logo-white-nb.png")
+        link(rel="stylesheet", href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css")
+        link(rel="stylesheet", href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css")
+    body(style="height: 100vh; display: flex; flex-direction: column")
+        include includes/navbar-dark
+
+        div(class="main" style="flex: 1")
+            div(class="container")
+                div(class="row")
+                    div(class="delivery__payments")
+                        h3 Доставка та оплата
+
+                        div(class="payments")
+                            h4 Оплата
+                            span Після замовлення на сайті вам зателефонує менеджер, для підтвердження та уточнення способу оплати. Це може бути:
+                            p * Повна передплата на розрахунковий рахунок.
+                            p ​* Оплата у мобільному додатку Нова Пошта з послугою Сейф-сервіс.
+                            p ​* Готівковий або безготівковий розрахунок на виробництві при самовивозі.
+
+                        div(class="delivery")
+                            h4 Доставка
+                            p * Обробка замовлення триває 1-3 робочих дні.
+                            p ​* Доставка здійснюється вибраним перевізником на вказане відділення або адресу.
+
+        include includes/footer-dark
+        include includes/cart-popup
+          
+            script(src="/js/custom.js")
+            script(src="/js/cart.js")
+

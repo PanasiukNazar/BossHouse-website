@@ -1,0 +1,29 @@
+@import url("https://fonts.googleapis.com/css2?family=Unbounded:wght@200..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+.thanks__page {
+  text-align: center;
+}
+.thanks__page h3 {
+  margin-top: 120px;
+  font-size: 40px;
+  font-weight: 500;
+  line-height: 50px;
+  color: #fff;
+  text-transform: uppercase;
+  background: #ff914d;
+  padding: 20px 40px;
+  border-radius: 80px;
+  margin-bottom: 20px;
+}
+.thanks__page span {
+  display: inline-block;
+  font-family: "Montserrat";
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 27px;
+  margin-bottom: 50px;
+}
+.thanks__page img {
+  border-radius: 30px;
+  margin-bottom: 120px;
+}/*# sourceMappingURL=thanks.css.map */

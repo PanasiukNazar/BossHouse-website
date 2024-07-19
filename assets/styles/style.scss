@@ -694,6 +694,152 @@ body::-webkit-scrollbar-thumb {
 
 // DEVIDER end
 
+// DELIVERY AND PYMENTS PAGE START
+.delivery__payments {
+    h3 {
+        text-align: center;
+        font-size: 40px;
+        font-weight: 500;
+        line-height: 50px;
+        text-transform: uppercase;
+        margin-top: 50px;
+        margin-bottom: 30px;
+    }
+
+    .payments {
+        margin-bottom: 40px;
+        h4 {
+            font-size: 18px;
+            font-weight: 700;
+            line-height: 22px;
+            margin-bottom: 20px;
+        }
+        span {
+            display: inline-block;
+            font-family: 'Montserrat';
+            font-size: 18px;
+            font-weight: 500;
+            line-height: 21px;
+            color: #7d7d7d;
+            margin-bottom: 15px;
+        }
+        p {
+            font-family: 'Montserrat';
+            font-size: 18px;
+            font-weight: 500;
+            line-height: 21px;
+            color: #7d7d7d;
+
+            margin-bottom: 10px;
+
+            &:last-child {
+                margin-bottom: 0px;
+            }
+        }
+    }
+
+    .delivery {
+        h4 {
+            font-size: 18px;
+            font-weight: 700;
+            line-height: 22px;
+            margin-bottom: 20px;
+        }
+        p {
+            font-family: 'Montserrat';
+            font-size: 18px;
+            font-weight: 500;
+            line-height: 21px;
+            color: #7d7d7d;
+
+            margin-bottom: 10px;
+
+            &:last-child {
+                margin-bottom: 0px;
+            }
+        }
+    }
+}
+// DELIVERY AND PYMENTS PAGE END
+
+// REFUND PAGE END
+.refund__policy {
+    h3 {
+        text-align: center;
+        font-size: 40px;
+        font-weight: 500;
+        line-height: 50px;
+        text-transform: uppercase;
+        margin-top: 50px;
+        margin-bottom: 30px;
+    }
+    span {
+        display: inline-block;
+        font-family: 'Montserrat';
+        font-size: 18px;
+        font-weight: 500;
+        line-height: 21px;
+        color: #7d7d7d;
+        margin-bottom: 15px;
+    }
+
+    p {
+        font-family: 'Montserrat';
+        font-size: 18px;
+        font-weight: 500;
+        line-height: 30px;
+        color: $main_theme_color;
+        &:not(:last-child) {
+            margin-bottom: 30px;
+        }
+    }
+}
+// REFUND PAGE END
+
+// CONTACT PAGE END
+.contacts {
+    h3 {
+        text-align: center;
+        font-size: 40px;
+        font-weight: 500;
+        line-height: 50px;
+        text-transform: uppercase;
+        margin-top: 50px;
+        margin-bottom: 30px;
+    }
+    .row {
+        &:not(:last-child) {
+            border-bottom: 1px solid #ebebeb;
+            padding-bottom: 30px;
+            margin-bottom: 30px;
+        }
+    }
+
+    .label {
+        margin-bottom: 15px;
+        i {
+            color: $main_theme_color;
+            font-size: 18px;
+        }
+
+        span {
+            font-family: 'Montserrat';
+            font-size: 18px;
+            font-weight: 500;
+            line-height: 22px;
+            margin-left: 6px;
+            color: #7d7d7d;
+        }
+    }
+
+    .label__value {
+        font-size: 18px;
+        font-weight: 700;
+        line-height: 22px;
+    }
+}
+// CONTACT PAGE END
+
 //  animations start
 .fadeInDown {
     visibility: visible;
