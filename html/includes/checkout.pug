@@ -1,0 +1,119 @@
+div(class="checkout")
+    div(class="container")
+        div(class="pre__navigation")
+            p(class="navigation__links")
+                a(href="index.html") Галерея / 
+                a(href="index.html") Вибір будки, каталог / 
+                a(href="index.html") Картка товару / 
+                span(class="active__page") Оформлення замовлення
+
+    include devider
+
+
+    div(class="container")
+        div(class="row" id="checkout")
+            h3(class="checkout__heading") Оформлення Замовлення
+
+            div(class="col-md-6")
+                div(class="checkout__personal__data")
+                    h5(class="checkout__title") 1. Особисті дані
+                    div(class="client__data")
+                        label Номер телефону*
+                        input(type="number" placeholder="+38 (0__) _ _ _-_ _-_ _")
+
+                    div(class="client__data")
+                        label Імʼя та прізвище*
+                        input(type="text")
+
+                    div(class="client__data")
+                        label E-mail
+                        input(type="email")
+
+                div(class="checkout__delivery__info")
+                    h5(class="checkout__title") 2. Оберіть місто і спосіб доставки
+                    div(class="memo")
+                        img(class="memo__icon" src="/assets/images/icons/delivery-icon.png" alt="")
+                        div(class="memo__info")
+                            h4 Доставка по Україні
+                            span за тарифами перевізника в межах 200 - 400 грн
+
+                    div(class="delivery__info")
+                        div(class="client__city")
+                            span Місто
+                            div(class="city__list") 
+                                input(type="text" class="city")
+                                i(class="bi bi-chevron-down")
+
+                    div(class="delivery__type")
+                        span Спосіб доставки
+                        div(class="post__office")
+                            div(class="type__wrapper")
+                                div(class="checkout__checkbox checked")
+                                    span
+                                h5(class="checkout__title") Самовивіз із Нової Пошти
+                            div(class="availabel__departments")
+                                span Виберіть відповідне відділення
+                                div(class="department__list")
+                                    input(type="text" class="department")
+                                    i(class="bi bi-chevron-down")
+
+                        div(class="post__office__home")
+                            div(class="type__wrapper")
+                                div(class="checkout__checkbox")
+                                    span
+                                h5(class="checkout__title") Адресна доставка із Нової Пошти
+                            div(class="availabel__departments")
+                                span Введіть адрес доставки
+                                div(class="client__address")
+                                    div(class="address__item")
+                                        span Вулиця
+                                        input(type="text")
+                                    div(class="address__item")
+                                        span Будинок
+                                        input(type="text")
+                                    div(class="address__item")
+                                        span Квартира
+                                        input(type="text")
+
+                        div(class="post__office")
+                            div(class="type__wrapper")
+                                div(class="checkout__checkbox")
+                                    span
+                                h5(class="checkout__title") Самовивіз із Укр Пошти
+                            div(class="availabel__departments")
+                                span Виберіть відповідне відділення
+                                div(class="department__list")
+                                    input(type="text" class="department")
+                                    i(class="bi bi-chevron-down")
+
+                        div(class="post__office__home")
+                            div(class="type__wrapper")
+                                div(class="checkout__checkbox")
+                                    span
+                                h5(class="checkout__title") Адресна доставка із Укр Пошти
+                            div(class="availabel__departments")
+                                span Введіть адрес доставки
+                                div(class="client__address")
+                                    div(class="address__item")
+                                        span Вулиця
+                                        input(type="text")
+                                    div(class="address__item")
+                                        span Будинок
+                                        input(type="text")
+                                    div(class="address__item")
+                                        span Квартира
+                                        input(type="text")
+
+                    div(class="order__comment")
+                        span Коментарій до замовлення
+                        textarea
+
+                    div(class="client__payment")
+                        h5(class="checkout__title") 3. Оплата
+                        div(class="pyment__option")
+                            div(class="checkout__checkbox checked")
+                                span
+                            h5(class="checkout__title") Самовивіз із Нової Пошти
+
+
+            div(class="col-md-6")

@@ -1,0 +1,235 @@
+@import url("https://fonts.googleapis.com/css2?family=Unbounded:wght@200..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+.checkout__heading {
+  font-size: 40px;
+  font-weight: 500;
+  line-height: 50px;
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 30px;
+}
+
+.checkout__title {
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 22px;
+  margin-bottom: 30px;
+}
+
+.checkout__personal__data .client__data {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+.checkout__personal__data label {
+  font-size: 18px;
+  font-family: "Montserrat";
+  font-weight: 500;
+  line-height: 22px;
+  color: #7d7d7d;
+  margin-bottom: 15px;
+}
+.checkout__personal__data input {
+  font-family: "Montserrat";
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 22px;
+  background: #f6f6f6;
+  border: none;
+  outline: none;
+  padding: 18px 20px;
+  border-radius: 10px;
+}
+.checkout__personal__data input::-webkit-outer-spin-button, .checkout__personal__data input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
+.checkout__delivery__info .memo {
+  display: flex;
+  align-items: start;
+  background: #f6f6f6;
+  padding: 30px;
+  border-radius: 20px;
+  margin-bottom: 20px;
+}
+.checkout__delivery__info .memo__icon {
+  width: 24px;
+  height: 24px;
+  margin-right: 15px;
+}
+.checkout__delivery__info .memo__info h4 {
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 22.32px;
+}
+.checkout__delivery__info .memo__info span {
+  font-family: "Montserrat";
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 21px;
+  color: #7d7d7d;
+}
+.checkout__delivery__info .delivery__info .client__city {
+  margin-bottom: 20px;
+}
+.checkout__delivery__info .delivery__info .client__city span {
+  display: inline-block;
+  font-family: "Montserrat";
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 22px;
+  color: #7d7d7d;
+  margin-bottom: 15px;
+}
+.checkout__delivery__info .delivery__info .client__city .city__list {
+  position: relative;
+}
+.checkout__delivery__info .delivery__info .client__city .city__list .city {
+  font-family: "Montserrat";
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 22px;
+  width: 100%;
+  padding: 0px 20px;
+  background: #f6f6f6;
+  border: none;
+  outline: none;
+  height: 58px;
+  border-radius: 10px;
+  border-radius: 10px;
+}
+.checkout__delivery__info .delivery__info .client__city .city__list i {
+  position: absolute;
+  right: 25px;
+  top: 20px;
+}
+.checkout__delivery__info .delivery__type {
+  border-bottom: 1px solid #ebebeb;
+  padding-bottom: 10px;
+  margin-bottom: 30px;
+}
+.checkout__delivery__info .delivery__type span {
+  display: inline-block;
+  font-family: "Montserrat";
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 22px;
+  color: #7d7d7d;
+  margin-bottom: 15px;
+}
+.checkout__delivery__info .delivery__type .post__office {
+  padding: 20px;
+}
+.checkout__delivery__info .delivery__type .post__office .type__wrapper {
+  display: flex;
+}
+.checkout__delivery__info .delivery__type .post__office .checkout__checkbox {
+  border: 1px solid #d0d5dd;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+}
+.checkout__delivery__info .delivery__type .post__office .checkout__checkbox.checked {
+  border: 7px solid #ff914d;
+}
+.checkout__delivery__info .delivery__type .post__office .checkout__title {
+  margin-bottom: 20px;
+}
+.checkout__delivery__info .delivery__type .post__office .availabel__departments .department__list {
+  position: relative;
+}
+.checkout__delivery__info .delivery__type .post__office .availabel__departments .department__list .department {
+  font-family: "Montserrat";
+  width: 100%;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 22px;
+  background: #f6f6f6;
+  padding: 0px 20px;
+  border: none;
+  outline: none;
+  height: 58px;
+  border-radius: 10px;
+  border-radius: 10px;
+}
+.checkout__delivery__info .delivery__type .post__office .availabel__departments .department__list i {
+  position: absolute;
+  right: 25px;
+  top: 20px;
+}
+.checkout__delivery__info .delivery__type .post__office.active {
+  border: 1px solid #ff914d;
+  border-radius: 20px;
+}
+.checkout__delivery__info .delivery__type .post__office__home {
+  padding: 20px;
+}
+.checkout__delivery__info .delivery__type .post__office__home .type__wrapper {
+  display: flex;
+}
+.checkout__delivery__info .delivery__type .post__office__home .checkout__checkbox {
+  border: 1px solid #d0d5dd;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+}
+.checkout__delivery__info .delivery__type .post__office__home .checkout__checkbox.checked {
+  border: 7px solid #ff914d;
+}
+.checkout__delivery__info .delivery__type .post__office__home .checkout__title {
+  margin-bottom: 20px;
+}
+.checkout__delivery__info .delivery__type .post__office__home .availabel__departments .client__address {
+  display: flex;
+  column-gap: 20px;
+}
+.checkout__delivery__info .delivery__type .post__office__home .availabel__departments .client__address .address__item {
+  display: flex;
+  flex-direction: column;
+}
+.checkout__delivery__info .delivery__type .post__office__home .availabel__departments .client__address div input {
+  height: 58px;
+  border: none;
+  outline: none;
+  background: #f6f6f6;
+  border-radius: 10px;
+  padding: 0 15px;
+  max-width: 150px;
+}
+.checkout__delivery__info .order__comment {
+  display: flex;
+  flex-direction: column;
+  border-bottom: 1px solid #ebebeb;
+  padding-bottom: 30px;
+  margin-bottom: 30px;
+}
+.checkout__delivery__info .order__comment span {
+  font-family: "Montserrat";
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 22px;
+  color: #7d7d7d;
+  margin-bottom: 15px;
+}
+.checkout__delivery__info .order__comment textarea {
+  background: #f6f6f6;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+}
+.checkout__delivery__info .client__payment .pyment__option {
+  display: flex;
+  margin-left: 20px;
+}
+.checkout__delivery__info .client__payment .pyment__option .checkout__checkbox {
+  border: 1px solid #d0d5dd;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+}
+.checkout__delivery__info .client__payment .pyment__option .checkout__checkbox.checked {
+  border: 7px solid #ff914d;
+}
